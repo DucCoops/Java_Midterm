@@ -11,7 +11,7 @@ Tầng View chịu trách nhiệm hiển thị các dữ liệu Model và nói c
 
 Controller chịu trách nhiệm xử lý yêu cầu người sử dụng và xây dựng Model phù hợp và chuyển nó qua tầng View để hiển thị.
 
-##Code Structure
+## Code Structure
 Cấu trúc chương trình của trang web được tổ chức như sau:
 - nguyenduc.springcommerce: bao gồm class main của chương trình.
 - nguyenduc.springcommerce.controllers: Chứa các bộ điều khiển (controller) xử lý các yêu cầu (request) và phản hồi (response) với HTTP.
