@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" th:href="@{img/apple-icon.png}">
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{assets/img/favicon.ico}">
+
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/templatemo.css}">
+    <link rel="stylesheet" th:href="@{css/custom.css}">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" th:href="@{css/fontawesome.min.css}">
+</head>
+<body>
+<section class="vh-100" style="background-color: whitesmoke;" >
+  <div class="container h-100"  >
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <p><span class="h2">Shopping Cart </span><span class="h4"></span></p>
+        <div class="card mb-4" th:each="i:${listString}">
+          <div class="card-body p-4">
+
+            <div class="row align-items-center">
+              <div class="col-md-2">
+                <img
+                     class="img-fluid" alt="Generic placeholder image" th:src="${i[0]}">
+              </div>
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Name</p>
+                  <p class="lead fw-normal mb-0">[[${i[1]}]]</p>
+                </div>
+              </div>
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Brand</p>
+                  <p class="lead fw-normal mb-0"><i class="fas fa-circle me-2"></i>
+                    [[${i[2]}]]</p>
+                </div>
+              </div>
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Quantity</p>
+                  <p class="lead fw-normal mb-0">[[${i[3]}]]</p>
+                </div>
+              </div>
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Price</p>
+                  <p class="lead fw-normal mb-0">[[${i[4]}]]</p>
+                </div>
+              </div>
+              <div class="col-md-2 d-flex justify-content-center">
+                <div>
+                  <p class="small text-muted mb-4 pb-2">Total</p>
+                  <p class="lead fw-normal mb-0">[[${i[5]}]]</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-5">
+          <div class="card-body p-4">
+            <div class="float-end">
+              <p class="mb-0 me-5 d-flex align-items-center">
+                <span class="small text-muted me-2">Order total:</span> <span
+                      class="lead fw-normal">[[${cart.getPrice()}]]</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Customer Name</label>
+            <input type="email" class="form-control" id="InputCustomerName" aria-describedby="emailHelp" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="email" class="form-control" id="InputPhone" aria-describedby="emailHelp" placeholder="Enter phone number">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+        </form>
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-light btn-lg me-2">
+            <a class="nav-link" href="shop">Continue shopping</a>
+          </button>
+          <button type="button" class="btn btn-primary btn-lg me-2"><a class="nav-link" href="success" onclick="redirect()">Confirm</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Start Script -->
+<script th:src="@{js/jquery-1.11.0.min.js}"></script>
+<script th:src="@{js/jquery-migrate-1.2.1.min.js}"></script>
+<script th:src="@{js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{js/templatemo.js}"></script>
+<script th:src="@{js/custom.js}"></script>
+
+<!-- End Script -->
+</body>
+</html>
