@@ -30,7 +30,7 @@ Những công cụ cần có:
 Các bước thực hiện:
 - Mở ứng dụng XAMPP, chọn start Apache và MySQL
 - Truy cập phpMyAdmin bằng cách nhấn Admin bên cạnh nút Start MySQL
-- Chọn import -> Chọn database java_ecommerce.sql -> 
+- Chọn import -> Chọn database java_ecommerce.sql -> Import
 - Mở công cụ lập trình (trong phần này sẽ là Intellij)
 - Open project
 - Chạy class main (Application)
